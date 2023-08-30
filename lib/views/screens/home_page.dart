@@ -1,3 +1,5 @@
+import 'dart:io';
+
 import 'package:flutter/material.dart';
 import 'package:provider_revision_app/utils/route_utils.dart';
 
@@ -8,7 +10,9 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text("Home Page"),
+        title: Platform.isAndroid
+            ? const Text("Home Page")
+            : const Text("iOS app"),
       ),
       body: Center(
         child: Column(
@@ -21,7 +25,9 @@ class HomePage extends StatelessWidget {
               child: const Text("Counter Page"),
             ),
             ElevatedButton(
-              onPressed: () {},
+              onPressed: () {
+                Navigator.of(context).pushNamed(MyRoutes.ecomPage);
+              },
               child: const Text("E commerce Page"),
             ),
           ],

@@ -3,6 +3,7 @@ import 'package:provider/provider.dart';
 import 'package:provider_revision_app/controllers/counter_provider.dart';
 import 'package:provider_revision_app/utils/route_utils.dart';
 import 'package:provider_revision_app/views/screens/counter_page.dart';
+import 'package:provider_revision_app/views/screens/e_com_page.dart';
 import 'package:provider_revision_app/views/screens/home_page.dart';
 
 //  ChangeNotifierProvider    => 1 Provider
@@ -30,6 +31,7 @@ class MyApp extends StatelessWidget {
       routes: {
         MyRoutes.home: (context) => const HomePage(),
         MyRoutes.counterPage: (context) => const CounterPage(),
+        MyRoutes.ecomPage: (context) => const EcomPage(),
       },
     );
   }
